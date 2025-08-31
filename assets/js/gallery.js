@@ -8,9 +8,6 @@ let myData = null;
 
 
 
-/* kicks off app when the DOM is loaded */
-window.addEventListener("load", initApp);
-
 
 // din kode her 
 
@@ -18,18 +15,12 @@ window.addEventListener("load", initApp);
 
 
 
-/*  get data function  DO NOT TOUCH!!!!! ......................................................
 
-denne funktion vil typisk være en funktion der henter data fra et API
-*/
+/*  get data function  DO NOT TOUCH!!!!! ......................................................*/
 
-
-
-async function fetchData() {
+ function fetchData() {
     // data object
-    console.log('fetching data');
-    await new Promise(resolve => setTimeout(resolve, myLoadTime));
-
+ 
     const myData = [
 
         {
@@ -67,8 +58,7 @@ async function fetchData() {
             shortDescription: 'Carcharodon carcharias, også kendt som en hvidhaj.'
         }
     ];
-    initGallery(myData);
-
+   return  myData
 
 }
 
